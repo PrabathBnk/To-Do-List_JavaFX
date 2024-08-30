@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="433.0" prefWidth="691.0" style="-fx-background-color: #F4F8F9;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddNewTaskFormController">
+   <children>
+      <Text fill="#403f3f" layoutX="46.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Task">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#3876f2" height="75.0" layoutX="-12.0" layoutY="26.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="29.0" />
+      <Rectangle arcHeight="15.0" arcWidth="15.0" fill="WHITE" height="277.0" layoutX="46.0" layoutY="116.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="606.0">
+         <effect>
+            <DropShadow height="24.67" offsetY="2.0" radius="11.65" spread="0.06" width="23.93">
+               <color>
+                  <Color opacity="0.11450382322072983" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Rectangle>
+      <JFXTextField fx:id="txtTtle" focusColor="#3876f2" layoutX="90.0" layoutY="149.0" prefHeight="25.0" prefWidth="476.0" promptText="Title">
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextArea fx:id="txtDescription" focusColor="#3876f2" layoutX="90.0" layoutY="211.0" prefHeight="75.0" prefWidth="476.0" promptText="Description" />
+      <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#1f93ff7c" height="32.0" layoutX="438.0" layoutY="334.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="178.0">
+         <effect>
+            <Shadow height="26.86" radius="14.395" width="32.72">
+               <color>
+                  <Color red="0.46759259700775146" green="0.689428985118866" blue="1.0" opacity="0.8100000023841858" />
+               </color>
+            </Shadow>
+         </effect>
+      </Rectangle>
+      <JFXButton layoutX="438.0" layoutY="332.0" onAction="#btnAddTaskOnAction" prefHeight="32.0" prefWidth="178.0" style="-fx-background-color: #fff; -fx-background-radius: 8;" text="Add Task" textFill="#438efd">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="548.0" prefWidth="822.0" style="-fx-background-color: #F4F8F9;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CompleteTaskTableFormController">
+   <children>
+      <Rectangle arcHeight="15.0" arcWidth="15.0" fill="WHITE" height="369.0" layoutX="52.0" layoutY="126.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="719.0">
+         <effect>
+            <DropShadow height="24.67" offsetY="2.0" radius="11.65" spread="0.06" width="23.93">
+               <color>
+                  <Color opacity="0.11450382322072983" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Rectangle>
+      <Text fill="#403f3f" layoutX="44.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Complete Tasks">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#3876f2" height="75.0" layoutX="-14.0" layoutY="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="29.0" />
+      <TableView fx:id="tblCompletedTasks" layoutX="76.0" layoutY="148.0" prefHeight="326.0" prefWidth="674.0">
+        <columns>
+          <TableColumn fx:id="colTitle" prefWidth="144.0" sortable="false" text="Task Title" />
+          <TableColumn fx:id="colDescription" prefWidth="325.0" sortable="false" text="Description" />
+            <TableColumn fx:id="colCompletedDate" prefWidth="204.0" sortable="false" text="Completed Date" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

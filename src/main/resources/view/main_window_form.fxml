@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="679.0" prefWidth="1038.0" style="-fx-background-color: #F4F8F9;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainWindowFormController">
+   <children>
+      <Text fill="#403f3f" layoutX="63.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TO-DO LIST MANAGER">
+         <font>
+            <Font name="Arial Bold" size="39.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#3876f2" height="90.0" layoutX="-26.0" layoutY="28.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="53.0" />
+      <Rectangle arcHeight="15.0" arcWidth="15.0" fill="#f2a74b" height="33.0" layoutX="87.0" layoutY="138.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="183.0" />
+      <Label fx:id="lblDate" layoutX="165.0" layoutY="145.0" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="103.0" layoutY="144.0" text="Today:" textFill="#ffead0">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXListView fx:id="listView" layoutX="68.0" layoutY="181.0" prefHeight="397.0" prefWidth="896.0" style="-fx-background-radius: 15;">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </JFXListView>
+      <JFXButton disable="true" layoutX="789.0" layoutY="138.0" onAction="#btnEditTaskOnAction" prefHeight="33.0" prefWidth="80.0" style="-fx-background-color: d8e5ff;" text="Edit" textFill="#3b74e8">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="619.0" layoutY="139.0" onAction="#addNewTaskOnAction" prefHeight="33.0" prefWidth="160.0" style="-fx-background-color: d8e5ff;" text="Add New Task    +" textFill="#3b74e8">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton disable="true" layoutX="878.0" layoutY="138.0" onAction="#btnDeleteTaskOnAction" prefHeight="33.0" prefWidth="80.0" style="-fx-background-color: ffe8e8;" text="Delete" textFill="#e53c53">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="78.0" layoutY="591.0" onAction="#btnCompleteTaskTableOnAction" prefHeight="26.0" prefWidth="201.0" text="Completed Task Table" textFill="#68696b" underline="true">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="825.0" layoutY="588.0" onAction="#btnRefreshOnAction" prefHeight="33.0" prefWidth="107.0" style="-fx-background-color: ffefda;" text="Refresh" textFill="#e89c46">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <Text fill="#868686" layoutX="676.0" layoutY="647.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*Click button refresh after selecting completed tasks.">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
